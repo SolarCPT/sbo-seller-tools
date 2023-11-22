@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - คำนวณราคาขาย v.1.0</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <div class="container_calculatation">
+    <!--Calculate the selling price.
+  Calculate the fees and find out the actual selling price after deducting the sales fees for make sure you don't make a loss funds.-->
+    <form id="calculate-price">
+      <div class="header"><h1>ตั้งราคาขาย คำนวณ กำไร</h1>
+        <i>(โปรแกรมจะคำนวณหากำไรหลังจากหักค่า ธรรมเนียมการขายต่างๆแล้ว)</i>
+      </div>
+      
+      <!--ป้อนค่าต้นทุนสินค้า และราคาที่คิดจะขาย-->   
+	<div class="price_set_box">
+		<div class="inputprice_box">
+			<label for="product_fund">ทุนสินค้า</label>
+			<input pattern="[0-9]." type="number" placeholder="ป้อนต้นทุนสินค้า" name="product_fund" id="product_fund">
+		</div>
+		<div class="inputprice_box">
+			<label for="sale_price">ราคาขาย</label>
+			<input pattern="[0-9]." type="number" placeholder="ป้อนราคาที่คิดว่าจะขาย" name="sale_price" id="sale_price">
+		</div>
+		</div>
+
+			<!-- การตั้งค่า การเข้าร่วมโปรแกรมพิเศษ ต่างๆ  -->
+			<div id="platform-program">
+				<h4>โปรแกรมของแพลตฟอร์ม</h4>
+				<input type="checkbox" id="freeshipping" name="freeshipping" value="freeshipping">
+				<label for="freeshipping">เข้าร่วมโปรแกรมส่งฟรี 5.35%</label><br>
+				<input type="checkbox" id="dailycashback" name="dailycashback" value="dailycashback">
+				<label for="dailycashback">เข้าร่วมโปรแกรมเงินคืน 3.21%</label><br>
+			</div>
+			
+			<div class="header"><h4>โปรโมชั่นร้านค้า</h4></div>
+			
+			<div class="seller-promotion-block">
+				<div class="seller-promotion">
+					<label for="voucher">คูปองส่วนลด</label>
+					<input pattern="[0-9]." type="number" id="voucher" name="voucher" min="0" max="10000" value="0">
+				</div>
+				<div class="seller-promotion">
+					<label for="flexicombo">Flexi Combo</label>
+					<input pattern="[0-9]." type="number" id="flexicombo" name="flexicombo" min="0" max="50" value="0">
+					</div>
+					<div class="seller-promotion">
+					<label for="coins">ส่วนลดเหรียญ 🪙</label>
+					<input pattern="[0-9]." type="number" id="coins" name="coins" min="0" max="50" value="0">
+					</div>
+				<div class="seller-promotion">
+					<label for="shipping_fee_by_customer">ค่าจัดส่งจ่ายโดยลูกค้า</label>
+					<input pattern="[0-9]*" type="number" id="shipping_fee_by_customer" name="shipping_fee_by_customer" min="0" max="500" value="45">
+					
+			<br><br>
+				</div>
+				</div>
+			<!--end of seller-promotion-block-->
+			    <button type="button" id="calculate-btn" class="btn" id="btn-text-reset-id">คำนวณ</button>
+						<button type='button' class="btn" id='btn_reset'>รีเซ็ต</button>	<br><br>
+			
+	<div class="display_result">
+		<div id="expense">
+			<div id="commission-fees"><span class="dot_center">ค่าธรรมเนียมการขาย: </span><span id='seller_com_fee'></span></div>
+			<div id="transaction-fees"><span class="dot_center">ค่าธรรมเนียมการชำระเงิน: </span><span id='transaction_fee'></span></div>
+			<div id="freeshipping-fees"><span class="dot_center">ค่าธรรมเนียมโปรแกรมส่งฟรี: </span><span id="freeshipping_fee"></span></div>
+			<div id="dailycashback-fees"><span class="dot_center">ค่าธรรมเนียมเงินคืน: </span><span id="dailycashback_fee"></span></div>
+			<br>
+			<div id="total-fees">ค่าธรรมเนียมทั้งหมด : <span id="total_fees"></span></div>
+
+		<!--Display the Profit if available-->
+    <div id="profit">
+      <p><span>กำไร : </span><span id="net_profit"></span></p>
+    </div>
+</div>
+  </div>
+			</div>
+		<!--end of calculate-of-services-and-fees-->
+    </form>
+	
+	</div>
+		<!--Display expense of services and fees -->
+
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.7.0.slim.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+:root {
+    --card-height: 20vh;
+    --card-width: calc(var(--card-height) / 2);
+}
+
+html {
+    background-image: linear-gradient(to bottom right, #E1BEE7, #B2EBF2);
+    height: 150%;
+}
+
+body {
+    min-height: 50vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: textfield;
+    margin: 0;
+}
+
+.number-input {
+    display: flex;
+}
+
+input[type=number]:not(div.inputprice_box > input[type=number]) {
+    width: 80px;
+    border: solid 1px lightgrey;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.spinner {
+    border: solid 1px lightgrey;
+}
+
+.spinner:hover {
+    background: lightgrey;
+}
+
+.spinner:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.spinner:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.wrapper {
+    height: 150%;
+    background-image: linear-gradient(var(--rotate), rgba(0, 0, 0, 0.894), rgba(0, 12, 0, 0.854), 50%, #070708);
+    min-width: 35%;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+.container_calculatation {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2em;
+    border: 1px solid red;
+    font-size: calc(var(--card-height) / 9);
+}
+
+.price_set_box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /*justify-content:space-between;*/
+}
+
+.inputprice_box {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+}
+
+.inputprice_box>label {
+    padding: .25em .5em .25em 0;
+    flex: 1;
+}
+
+.inputprice_box>input {
+    flex: 2;
+}
+
+.header {
+    min-width: 70%;
+    display: flex column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.header>h1 {
+    min-width: 70%;
+    font-size: calc(var(--card-height) / 3.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2%;
+    line-height: 1.25em;
+}
+
+.header>i {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -1%;
+    color: #fff000;
+    font-size: calc(var(--card-height) / 10);
+    line-height: calc(var(--card-width)/3);
+}
+
+h2,
+h3,
+h4 {
+    margin-bottom: 2%;
+    font-size: calc(var(--card-height) / 6);
+}
+
+.seller-promotion-block {
+    min-width: 70%;
+    display: flex column;
+    flex-wrap: wrap;
+    align-items: right;
+    justify-content: flex-start;
+}
+
+.seller-promotion {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0.5em;
+}
+
+.seller-promotion>label {
+    padding: .1em .5em .25em 0;
+    flex: 1;
+}
+
+.seller-promotion>input[type=number] {
+    flex: 2;
+}
+
+.display_result {
+    min-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.display_result>#expense {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5em;
+}
+
+.display_result>#expense>div>span[class*="_center"] {
+    padding: .25em;
+    margin-bottom: 5%;
+}
+
+.display_result>#expense>div>span[id*="_fee"] {
+    padding: .25em;
+    margin-bottom: 5%;
+}
+
+#calculate-btn,
+#btn_reset {
+    font-size: calc(var(--card-height) / 8);
+    font-weight: 700;
+    color: rgb(4, 94, 240) 44, 191;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.container>div.fill>button {
+    padding: 0.2em 1em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
+    border-radius: .5em;
+}
+
+#btn_wrapper_container {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.btn_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: .1rem .2rem .1rem;
+    margin: .25em 0 .25em 0;
+}
+
+.btn {
+    background: #191c29;
+    margin: .25em 0 .25em .5em;
+    padding: .1rem;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    color: rgb(88 199 250 / 100%);
+    cursor: pointer;
+    font-family: cursive;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.btn::before {
+    content: "";
+    width: 108%;
+    height: 110%;
+    padding: 0.1rem;
+    background-image: linear-gradient( var(--rotate), #5ddcff, #3c67e3 100%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    left: -6%;
+    -o-animation: spin 1.5s linear infinite;
+    -moz-animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.btn:hover {
+    color: rgb(255 155 255 / 100%);
+    transition: color 1s;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    animation: none;
+    opacity: 0;
+}
+
+.btn::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient( var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+    -o-animation: spin 2.5s linear infinite;
+    -moz-animation: spin 2.5s linear infinite;
+    -webkit-animation: spin 2.5s linear infinite;
+    animation: spin 2.5s linear infinite;
+}
+
+
+/* For Opera */
+
+@-o-keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+
+/* For Mozilla Firefox */
+
+@-moz-keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+
+/* For Google Chrome and Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+#total_fees {
+    color: red;
+}
+
+#net_profit {
+    color: #0fff30;
+}
