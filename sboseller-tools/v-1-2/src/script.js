@@ -4,6 +4,7 @@ $(document).ready(function () {
 		document.getElementById("display-result").style.visibility = "visible";
 		let e = parseFloat($("#product_fund").val()),
 			t = parseFloat($("#sale_price").val()),
+		  exps = parseFloat($("#any_expense").val()),
 			a = $("#freeshipping"),
 			l = $("#dailycashback"),
 			o = parseFloat($("#voucher").val()),
@@ -29,11 +30,12 @@ $(document).ready(function () {
 				: (F = 0);
 		let d = r + n + p + F;
 		(d = parseFloat(d.toFixed(2)));
-		let f = d > 0 ? t - o - s - i - d - e : 0;
+		let f = d > 0 ? t - o - s - i - d - e - (exps=exps>0?exps:0) : 0;
 		(f = parseFloat(f.toFixed(2)));
-
+		let TotalPayment = t - o - s - i + c ;
+		(TotalPayment = parseFloat(TotalPayment.toFixed(2)));
 		let createDisplayResult = $(
-			"<div id='expense'><div id='commission-fees'><span class='dot_center'>ค่าธรรมเนียมการขาย: </span><span id='seller_com_fee'>" +
+			"<div id='expense'><div id='totalpayment'>ยอดที่ลูกค้าต้องชำระ = "+TotalPayment+"</div><div id='commission-fees'><span class='dot_center'>ค่าธรรมเนียมการขาย: </span><span id='seller_com_fee'>" +
 				r +
 				"</span></div><div id='transaction-fees'><span class='dot_center'>ค่าธรรมเนียมการชำระเงิน: </span><span id='transaction_fee'>" +
 				n +

@@ -56,17 +56,19 @@ input[type=number]{
 
 .wrapper {
     background:#048194;
-	  min-width:35%;
+	  max-width:96%;
+		padding:2em;
     margin: 0 auto;
     display: flex;
     align-items: center;
 }
 
 .container_calculatation {
+		min-width:70%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 2em;
+    padding: 1em;
     font-size: calc(var(--card-height) / 9);
 }
 
@@ -99,7 +101,7 @@ input[type=number]{
     margin-top: -1%;
     color: #fff000;
     font-size: calc(var(--card-height) / 10);
-    line-height: calc(var(--card-width)/3);
+    line-height: calc(var(--card-height) / 7);
 }
 
 h2,
@@ -109,6 +111,7 @@ h4 {
     font-size: calc(var(--card-height) / 6);
 }
 .platform-program {
+	margin:1em auto 1em auto;
 	position:relative;
 }
 .platform-program > h4{
@@ -122,32 +125,38 @@ h4 {
 	  min-width:90%;
 	  position: absolute;
     z-index: 1;
-    top:-20%;
+    top:-10%;
 }
 .price_set_box {
+	  min-width:70%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /*justify-content:space-between;*/
+		margin:1em auto 1em auto
 }
 
 .inputprice_box {
+	  min-width:70%;
     display: flex;
-    justify-content: flex-end;
-    padding: .5em;
+    justify-content:flex-start;
+    padding: .15em;
 }
 
 .inputprice_box>label {
-    padding: .25em .5em .25em 0;
-    flex: 1;
+	display:flex;
+  padding-left: .2em;
+	flex: 1 0 2px;
+	justify-content:flex-start;
 }
 
 .inputprice_box>input {
-    flex: 2;
+	  display:flex;
+    flex: 2 0 40px;
 }
 
 .seller-promotion-block {
     min-width: 70%;
+	  margin:1em auto 1em auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -165,7 +174,7 @@ h4 {
 	  min-width:90%;
 	  position: absolute;
     z-index: 1;
-    top:15%;
+    top:10%;
 }
 .seller-promotion {
     display: flex;

@@ -1,7 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2023 fireman (https://codepen.io/sdkghostman/pen/MWLVdYW)
-Fork of an original work คำนวณราคาขาย v.1.2 (https://codepen.io/sdkghostman/pen/MWLVdYW)
+Copyright (c) 2023 fireman (https://codepen.io/sdkghostman/pen/rNPGQOE)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

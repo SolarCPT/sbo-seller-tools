@@ -1,4 +1,4 @@
-# คำนวณราคาขาย v.1.2
+# ตั้งราคา ขายดี มีกำไร v.1.2
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/sdkghostman/pen/MWLVdYW](https://codepen.io/sdkghostman/pen/MWLVdYW).
+A Pen created on CodePen.io. Original URL: [https://codepen.io/sdkghostman/pen/rNPGQOE](https://codepen.io/sdkghostman/pen/rNPGQOE).
 
